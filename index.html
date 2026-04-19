@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Ristol — AI/ML Portfolio</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #1a1a2e;
+            --muted: #6b7280;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --border: #e5e7eb;
+            --tag-bg: #f3f4f6;
+            --green: #059669;
+            --green-bg: #d1fae5;
+            --amber: #d97706;
+            --amber-bg: #fef3c7;
+            --purple: #7c3aed;
+            --purple-bg: #ede9fe;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        .header {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px 40px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .tagline {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .header .bio {
+            font-size: 0.95rem;
+            color: var(--text);
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .header-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 6px 14px;
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .header-links a:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* --- Projects grid --- */
+        .projects {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 16px;
+            transition: box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .badge-live { background: var(--green-bg); color: var(--green); }
+        .badge-cv { background: var(--purple-bg); color: var(--purple); }
+        .badge-nlp { background: var(--accent-light); color: var(--accent); }
+        .badge-tabular { background: var(--amber-bg); color: var(--amber); }
+        .badge-rag { background: var(--tag-bg); color: var(--muted); }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 14px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .tag {
+            font-size: 0.78rem;
+            background: var(--tag-bg);
+            color: var(--muted);
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-links a {
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-links a:hover { text-decoration: underline; }
+
+        .project-links .live-link {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            .header { padding: 48px 20px 32px; }
+            .header h1 { font-size: 1.6rem; }
+            .projects { padding: 0 20px 60px; }
+            .project-card { padding: 20px; }
+            .project-top { flex-direction: column; gap: 6px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Eric Ristol</h1>
+        <p class="tagline">AI student at UAB &middot; Barcelona</p>
+        <p class="bio">
+            I'm building a portfolio of machine learning projects from scratch — from classical regression
+            to transformers with LoRA, CNNs from the original paper, and RAG systems. Each project
+            is a complete pipeline: data, training, evaluation, prediction, tests, and (where it makes sense)
+            a live web demo you can try right now.
+        </p>
+        <div class="header-links">
+            <a href="https://github.com/Eric-Ristol" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="mailto:edominguz9@gmail.com">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                Email
+            </a>
+        </div>
+    </div>
+
+    <div class="projects">
+        <p class="section-title">Projects</p>
+
+        <!-- 1. Sentiment Classifier -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>Sentiment Classifier (DistilBERT + LoRA)</h3>
+                <span class="badge badge-live">Live Demo</span>
+            </div>
+            <p>
+                Fine-tunes DistilBERT for binary sentiment classification using LoRA — only 0.3% of
+                parameters are updated, producing a ~1 MB adapter that matches full fine-tuning accuracy.
+                Three-way comparison: zero-shot baseline vs LoRA vs full fine-tune. Served via FastAPI
+                with a web interface.
+            </p>
+            <div class="tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">Transformers</span>
+                <span class="tag">LoRA / PEFT</span>
+                <span class="tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/sentiment-classifier" target="_blank">Try it live &rarr;</a>
+                <a href="https://github.com/Eric-Ristol/llm-fine-tuner" target="_blank">Source code</a>
+            </div>
+        </div>
+
+        <!-- 2. Bicing Availability -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>Bicing Availability Predictor</h3>
+                <span class="badge badge-live">Live Demo</span>
+            </div>
+            <p>
+                Predicts bike availability at Barcelona Bicing stations 15 minutes ahead.
+                Time-series regression with proper temporal train/test split, lag features, rolling means,
+                and a persistence baseline to beat. RandomForest and LightGBM compared. REST API + web demo.
+            </p>
+            <div class="tags">
+                <span class="tag">scikit-learn</span>
+                <span class="tag">LightGBM</span>
+                <span class="tag">Time Series</span>
+                <span class="tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/bicing-predictor" target="_blank">Try it live &rarr;</a>
+                <a href="https://github.com/Eric-Ristol/bicing-availability" target="_blank">Source code</a>
+            </div>
+        </div>
+
+        <!-- 3. ResNet-20 -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>ResNet-20 Image Classifier (from scratch)</h3>
+                <span class="badge badge-live">Live Demo</span>
+            </div>
+            <p>
+                A from-scratch reimplementation of ResNet-20 from the original He et al. 2016 paper.
+                Nothing imported from torchvision.models — BasicBlock, residual connections, batch norm,
+                He initialisation, all written by hand. Trained on CIFAR-10. Drag-and-drop web demo.
+            </p>
+            <div class="tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">CNN</span>
+                <span class="tag">CIFAR-10</span>
+                <span class="tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/resnet-cifar10" target="_blank">Try it live &rarr;</a>
+                <a href="https://github.com/Eric-Ristol/resnet-from-scratch" target="_blank">Source code</a>
+            </div>
+        </div>
+
+        <!-- 4. LLM Fine-tune (SmolLM2) -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>LLM Fine-Tune (SmolLM2 ML Tutor)</h3>
+                <span class="badge badge-nlp">NLP</span>
+            </div>
+            <p>
+                Fine-tunes SmolLM2-360M with LoRA to act as a machine learning tutor. Trained on 40
+                curated Q&A pairs with chat templates. Uses HuggingFace Trainer with gradient accumulation
+                and cosine LR scheduling. Includes automated evaluation comparing base vs fine-tuned outputs.
+            </p>
+            <div class="tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">HuggingFace Trainer</span>
+                <span class="tag">LoRA / PEFT</span>
+                <span class="tag">SmolLM2</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Eric-Ristol/llm-finetune" target="_blank">Source code</a>
+            </div>
+        </div>
+
+        <!-- 5. Local RAG -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>Local RAG System</h3>
+                <span class="badge badge-rag">RAG</span>
+            </div>
+            <p>
+                Retrieval-Augmented Generation running entirely locally with Ollama and ChromaDB.
+                Three versions: simple (basic retrieval), smart (reranking + context compression),
+                and hybrid (keyword + semantic search). Streamlit UI for interactive document Q&A.
+            </p>
+            <div class="tags">
+                <span class="tag">Ollama</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">LangChain</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Eric-Ristol/local-rag" target="_blank">Source code</a>
+            </div>
+        </div>
+
+        <!-- 6. Student Performance -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>Student Performance Predictor</h3>
+                <span class="badge badge-tabular">Tabular ML</span>
+            </div>
+            <p>
+                Predicts a student's final grade from study habits, sleep, attendance, and previous grades.
+                Compares Linear Regression, Ridge, Lasso, Decision Tree, Random Forest, and SVR.
+                Proper train/test split with StandardScaler fitted only on training data.
+            </p>
+            <div class="tags">
+                <span class="tag">scikit-learn</span>
+                <span class="tag">Regression</span>
+                <span class="tag">Feature Scaling</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Eric-Ristol/student-performance" target="_blank">Source code</a>
+            </div>
+        </div>
+
+        <!-- 7. KNN from Scratch -->
+        <div class="project-card">
+            <div class="project-top">
+                <h3>KNN Classifier (from scratch)</h3>
+                <span class="badge badge-tabular">From Scratch</span>
+            </div>
+            <p>
+                K-Nearest Neighbours implemented from zero — Euclidean distance, majority voting,
+                no scikit-learn. Classifies tree species from physical measurements. Built to understand
+                the algorithm at the lowest level before using library implementations.
+            </p>
+            <div class="tags">
+                <span class="tag">NumPy</span>
+                <span class="tag">Classification</span>
+                <span class="tag">From Scratch</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Eric-Ristol/knn-from-scratch" target="_blank">Source code</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            Built by Eric Ristol &middot;
+            <a href="https://github.com/Eric-Ristol" target="_blank">github.com/Eric-Ristol</a>
+        </p>
+    </div>
+
+</body>
+</html>
