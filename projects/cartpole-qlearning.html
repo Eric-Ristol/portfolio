@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartPole Q-Learning - Eric Ristol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a class="nav-name" href="../index.html">Eric Ristol</a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h14M4 12h14M4 17h14"/></svg>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">About</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../posts.html">Posts</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail-header">
+            <a href="../projects.html" class="back-link">&larr; All projects</a>
+            <h1>CartPole Q-Learning (Reinforcement Learning)</h1>
+            <div class="badges">
+                <span class="badge badge-live">Live Demo</span>
+            </div>
+            <p>
+                A tabular Q-Learning agent that learns to balance a pole on a cart from scratch.
+                Discretises the continuous state space into bins and builds an action-value table
+                over 10,000 episodes of trial and error, going from instant failure (~25 steps)
+                to sustained balancing (150+ steps).
+            </p>
+            <div class="tags">
+                <span class="tag">Gymnasium</span>
+                <span class="tag">Q-Learning</span>
+                <span class="tag">Reinforcement Learning</span>
+                <span class="tag">NumPy</span>
+            </div>
+            <div class="project-detail-links">
+                <a href="https://github.com/Eric-Ristol/cartpole-qlearning" target="_blank" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    Source code
+                </a>
+                <a href="https://huggingface.co/spaces/EricRistol/cartpole-qlearning" target="_blank" class="btn btn-secondary">Open in HuggingFace</a>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Live Demo</h2>
+            <div class="demo-frame">
+                <iframe src="https://EricRistol-cartpole-qlearning.hf.space" loading="lazy" title="CartPole Q-Learning demo"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Eric Ristol &middot; 2025</span>
+            <div class="footer-links">
+                <a href="https://github.com/Eric-Ristol" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/eric-ristol" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

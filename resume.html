@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Eric Ristol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a class="nav-name" href="index.html">Eric Ristol</a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h14M4 12h14M4 17h14"/></svg>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="page-top">
+            <h1 class="page-title">Resume</h1>
+            <p class="page-subtitle">Education, experience, and skills.</p>
+        </div>
+
+        <!-- Download -->
+        <div class="resume-section resume-download">
+            <a href="assets/Eric_Ristol_CV.pdf" class="btn btn-primary" download>
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+            </a>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-section">
+            <p class="resume-label">Education</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>BSc Artificial Intelligence</h3>
+                    <p class="where">Universitat Autonoma de Barcelona (UAB)</p>
+                    <p class="when">Sept 2026 - present</p>
+                    <p class="details">
+                        Covers the full AI spectrum: strong math and theory, cognitive science, and applied
+                        engineering. Project-based learning.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>BSc Artificial Intelligence and Data Science</h3>
+                    <p class="where">La Salle Campus Barcelona (Universitat Ramon Llull)</p>
+                    <p class="when">Sept 2025 - June 2026</p>
+                    <p class="details">
+                        Systems-level focus: C programming, computational infrastructure, algorithms, data structures,
+                        probability and statistics, calculus, linear algebra, and computational logic. Top of class grades.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Machine Learning Specialization</h3>
+                    <p class="where">DeepLearning.AI / Stanford (Coursera)</p>
+                    <p class="when">July - Aug 2025</p>
+                    <p class="details">
+                        Andrew Ng's three-course specialization: supervised learning, advanced algorithms,
+                        and unsupervised learning.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>BSc Artificial Intelligence (Applied)</h3>
+                    <p class="where">IU International University of Applied Sciences</p>
+                    <p class="when">Sept 2024 - June 2025</p>
+                    <p class="details">
+                        Applied AI curriculum: machine learning fundamentals, Python, mathematical analysis, and hands-on
+                        project work. Completed alongside full-time employment.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Bachillerato</h3>
+                    <p class="where">Sabadell, Barcelona</p>
+                    <p class="when">Sept 2022 - June 2024</p>
+                    <p class="details">
+                        Spanish university entrance qualification. Completed while working full-time.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="resume-section">
+            <p class="resume-label">Work Experience</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Logistics Office / Warehouse Operative</h3>
+                    <p class="where">Hydac Technology, Barcelona</p>
+                    <p class="when">Sept 2022 - Sept 2025</p>
+                    <p class="details">
+                        Started in warehouse operations handling inventory, shipping, and receiving.
+                        Promoted to the logistics office after 6 months, managing order processing,
+                        stock coordination, and supplier communication.
+                        Worked full-time alongside Bachillerato and first year of university studies.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="resume-section">
+            <p class="resume-label">Technical Skills</p>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <h3>ML / Deep Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">LoRA / PEFT</span>
+                        <span class="skill-tag">LightGBM</span>
+                        <span class="skill-tag">OpenAI Gym</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Bash</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Data & Viz</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Gradio</span>
+                        <span class="skill-tag">HuggingFace Spaces</span>
+                        <span class="skill-tag">GitHub Pages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selected Projects -->
+        <div class="resume-section">
+            <p class="resume-label">Selected Projects</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Sentiment Classifier (DistilBERT + LoRA)</h3>
+                    <p class="details">Fine-tuned DistilBERT with LoRA for binary sentiment analysis. 0.3% of parameters, ~1 MB adapter. Live demo on HuggingFace.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>ResNet-20 from Scratch</h3>
+                    <p class="details">Full reimplementation from He et al. 2016 paper: BasicBlock, residual connections, batch norm, and He init all written by hand. Trained on CIFAR-10.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Credit Card Fraud Detector</h3>
+                    <p class="details">Unsupervised anomaly detection on 284K transactions (0.17% fraud). Compared Isolation Forest, LOF, and One-Class SVM.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>CartPole Q-Learning Agent</h3>
+                    <p class="details">Tabular reinforcement learning agent that learns to balance a pole through 10,000 episodes of trial and error.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Bicing Availability Predictor</h3>
+                    <p class="details">Time-series prediction of Barcelona bike-sharing availability with temporal features, lag engineering, and LightGBM.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>LLM ML Tutor (SmolLM2 + LoRA)</h3>
+                    <p class="details">Fine-tuned SmolLM2-360M as a machine learning tutor with 40 curated Q&A pairs and chat templates.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Student Performance Predictor</h3>
+                    <p class="details">Predicts student grades from study habits, sleep, and attendance. Compares 6 regression models.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>KNN from Scratch</h3>
+                    <p class="details">K-Nearest Neighbours built from zero with NumPy. Euclidean distance and majority voting, no libraries.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Habit Tracker</h3>
+                    <p class="details">CLI habit tracker with streak tracking, struggle detection, and full pytest suite. Built with Python and SQLite.</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;">
+                <a href="projects.html" style="font-size: 0.9rem; font-weight: 500;">See all projects with live demos &rarr;</a>
+            </p>
+        </div>
+
+        <!-- Languages -->
+        <div class="resume-section">
+            <p class="resume-label">Languages</p>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <div class="skill-tags">
+                        <span class="skill-tag">Catalan (Native)</span>
+                        <span class="skill-tag">Spanish (Native)</span>
+                        <span class="skill-tag">English (Professional)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Eric Ristol &middot; 2025</span>
+            <div class="footer-links">
+                <a href="https://github.com/Eric-Ristol" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/eric-ristol" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

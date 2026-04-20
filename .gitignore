@@ -1,0 +1,3 @@
+# Local-only: deploy helper and HF Spaces staging files
+deploy.command
+spaces/

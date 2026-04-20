@@ -3,446 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Ristol — AI/ML Portfolio</title>
-    <style>
-        :root {
-            --bg: #fafafa;
-            --card: #ffffff;
-            --text: #1a1a2e;
-            --muted: #6b7280;
-            --accent: #2563eb;
-            --accent-light: #dbeafe;
-            --border: #e5e7eb;
-            --tag-bg: #f3f4f6;
-            --green: #059669;
-            --green-bg: #d1fae5;
-            --amber: #d97706;
-            --amber-bg: #fef3c7;
-            --purple: #7c3aed;
-            --purple-bg: #ede9fe;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* --- Header --- */
-        .header {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 24px 40px;
-        }
-
-        .header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .header .tagline {
-            font-size: 1.1rem;
-            color: var(--muted);
-            margin-bottom: 20px;
-        }
-
-        .header .bio {
-            font-size: 0.95rem;
-            color: var(--text);
-            max-width: 600px;
-            margin-bottom: 24px;
-        }
-
-        .header-links {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .header-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.9rem;
-            color: var(--accent);
-            text-decoration: none;
-            padding: 6px 14px;
-            border: 1px solid var(--accent);
-            border-radius: 6px;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .header-links a:hover {
-            background: var(--accent);
-            color: #fff;
-        }
-
-        /* --- Projects grid --- */
-        .projects {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px 80px;
-        }
-
-        .section-title {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--muted);
-            margin-bottom: 20px;
-        }
-
-        .project-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 28px;
-            margin-bottom: 16px;
-            transition: box-shadow 0.2s;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-
-        .project-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
-        .project-card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .badge {
-            font-size: 0.72rem;
-            font-weight: 600;
-            padding: 3px 10px;
-            border-radius: 20px;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .badge-live { background: var(--green-bg); color: var(--green); }
-        .badge-cv { background: var(--purple-bg); color: var(--purple); }
-        .badge-nlp { background: var(--accent-light); color: var(--accent); }
-        .badge-tabular { background: var(--amber-bg); color: var(--amber); }
-        .badge-rag { background: var(--tag-bg); color: var(--muted); }
-
-        .project-card p {
-            color: var(--muted);
-            font-size: 0.92rem;
-            margin-bottom: 14px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 14px;
-        }
-
-        .tag {
-            font-size: 0.78rem;
-            background: var(--tag-bg);
-            color: var(--muted);
-            padding: 3px 10px;
-            border-radius: 4px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .project-links a {
-            font-size: 0.85rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .project-links a:hover { text-decoration: underline; }
-
-        .project-links .live-link {
-            color: var(--green);
-            font-weight: 600;
-        }
-
-        /* --- Footer --- */
-        .footer {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px 60px;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
-
-        .footer a { color: var(--accent); text-decoration: none; }
-        .footer a:hover { text-decoration: underline; }
-
-        /* --- Responsive --- */
-        @media (max-width: 600px) {
-            .header { padding: 48px 20px 32px; }
-            .header h1 { font-size: 1.6rem; }
-            .projects { padding: 0 20px 60px; }
-            .project-card { padding: 20px; }
-            .project-top { flex-direction: column; gap: 6px; }
-        }
-    </style>
+    <title>Eric Ristol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-    <div class="header">
-        <h1>Eric Ristol</h1>
-        <p class="tagline">AI student at UAB &middot; Barcelona</p>
-        <p class="bio">
-            I'm building a portfolio of machine learning projects from scratch — from classical regression
-            to transformers with LoRA and CNNs from the original paper. Each project
-            is a complete pipeline: data, training, evaluation, prediction, tests, and (where it makes sense)
-            a live web demo you can try right now.
-        </p>
-        <div class="header-links">
-            <a href="https://github.com/Eric-Ristol" target="_blank">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-            </a>
-            <a href="mailto:edominguz9@gmail.com">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-                Email
-            </a>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a class="nav-name" href="index.html">Eric Ristol</a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h14M4 12h14M4 17h14"/></svg>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <div class="container">
+
+        <section class="hero">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1>Eric Ristol</h1>
+            <p class="role">AI student &middot; Barcelona</p>
+            <p class="bio">
+                I'm studying Artificial Intelligence at La Salle Barcelona, and starting at UAB this September.
+                I came from a year of applied AI at IU and three years of full-time work in logistics alongside
+                my studies. I like building things from scratch to understand how they really work. From
+                implementing KNN with just NumPy to fine-tuning language models with LoRA, my projects cover
+                supervised and unsupervised learning, computer vision, NLP, and reinforcement learning, each
+                with a full pipeline: data, training, evaluation, and (where possible) a live demo.
+            </p>
+            <div class="hero-links">
+                <a href="projects.html" class="btn btn-primary">View projects</a>
+                <a href="https://github.com/Eric-Ristol" target="_blank" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                </a>
+                <a href="resume.html" class="btn btn-secondary">Resume</a>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <p class="highlights-label">At a glance</p>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <div class="number">10</div>
+                    <div class="label">Projects built</div>
+                </div>
+                <div class="highlight-card">
+                    <div class="number">7</div>
+                    <div class="label">Live demos</div>
+                </div>
+                <div class="highlight-card">
+                    <div class="number">6</div>
+                    <div class="label">ML paradigms covered</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <p class="highlights-label">Skills</p>
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <h3>Languages & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>ML Areas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NLP / Transformers</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Anomaly Detection</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Techniques</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LoRA / PEFT</span>
+                        <span class="skill-tag">Fine-tuning</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                        <span class="skill-tag">Time Series</span>
+                        <span class="skill-tag">Q-Learning</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Tools & Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Gradio</span>
+                        <span class="skill-tag">HuggingFace Spaces</span>
+                        <span class="skill-tag">SQLite</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <div class="projects">
-        <p class="section-title">Projects</p>
-
-        <!-- 1. Sentiment Classifier -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>Sentiment Classifier (DistilBERT + LoRA)</h3>
-                <span class="badge badge-live">Live Demo</span>
-            </div>
-            <p>
-                Fine-tunes DistilBERT for binary sentiment classification using LoRA — only 0.3% of
-                parameters are updated, producing a ~1 MB adapter that matches full fine-tuning accuracy.
-                Three-way comparison: zero-shot baseline vs LoRA vs full fine-tune. Served via FastAPI
-                with a web interface.
-            </p>
-            <div class="tags">
-                <span class="tag">PyTorch</span>
-                <span class="tag">Transformers</span>
-                <span class="tag">LoRA / PEFT</span>
-                <span class="tag">FastAPI</span>
-            </div>
-            <div class="project-links">
-                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/sentiment-classifier" target="_blank">Try it live &rarr;</a>
-                <a href="https://github.com/Eric-Ristol/sentiment-classifier" target="_blank">Source code</a>
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>Eric Ristol &middot; 2025</span>
+            <div class="footer-links">
+                <a href="https://github.com/Eric-Ristol" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/eric-ristol" target="_blank">LinkedIn</a>
             </div>
         </div>
-
-        <!-- 2. Bicing Availability -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>Bicing Availability Predictor</h3>
-                <span class="badge badge-live">Live Demo</span>
-            </div>
-            <p>
-                Predicts bike availability at Barcelona Bicing stations 15 minutes ahead.
-                Time-series regression with proper temporal train/test split, lag features, rolling means,
-                and a persistence baseline to beat. RandomForest and LightGBM compared. REST API + web demo.
-            </p>
-            <div class="tags">
-                <span class="tag">scikit-learn</span>
-                <span class="tag">LightGBM</span>
-                <span class="tag">Time Series</span>
-                <span class="tag">FastAPI</span>
-            </div>
-            <div class="project-links">
-                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/bicing-predictor" target="_blank">Try it live &rarr;</a>
-                <a href="https://github.com/Eric-Ristol/bicing-predictor" target="_blank">Source code</a>
-            </div>
-        </div>
-
-        <!-- 3. ResNet-20 -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>ResNet-20 Image Classifier (from scratch)</h3>
-                <span class="badge badge-live">Live Demo</span>
-            </div>
-            <p>
-                A from-scratch reimplementation of ResNet-20 from the original He et al. 2016 paper.
-                Nothing imported from torchvision.models — BasicBlock, residual connections, batch norm,
-                He initialisation, all written by hand. Trained on CIFAR-10. Drag-and-drop web demo.
-            </p>
-            <div class="tags">
-                <span class="tag">PyTorch</span>
-                <span class="tag">CNN</span>
-                <span class="tag">CIFAR-10</span>
-                <span class="tag">FastAPI</span>
-            </div>
-            <div class="project-links">
-                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/resnet-cifar10" target="_blank">Try it live &rarr;</a>
-                <a href="https://github.com/Eric-Ristol/resnet-from-scratch" target="_blank">Source code</a>
-            </div>
-        </div>
-
-        <!-- 4. LLM Fine-tune (SmolLM2) -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>LLM Fine-Tune (SmolLM2 ML Tutor)</h3>
-                <span class="badge badge-live">Live Demo</span>
-            </div>
-            <p>
-                Fine-tunes SmolLM2-360M with LoRA to act as a machine learning tutor. Trained on 40
-                curated Q&A pairs with chat templates. Uses HuggingFace Trainer with gradient accumulation
-                and cosine LR scheduling. Includes automated evaluation comparing base vs fine-tuned outputs.
-            </p>
-            <div class="tags">
-                <span class="tag">PyTorch</span>
-                <span class="tag">HuggingFace Trainer</span>
-                <span class="tag">LoRA / PEFT</span>
-                <span class="tag">SmolLM2</span>
-            </div>
-            <div class="project-links">
-                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/ml-tutor" target="_blank">Try it live &rarr;</a>
-                <a href="https://github.com/Eric-Ristol/ml-tutor-lora" target="_blank">Source code</a>
-            </div>
-        </div>
-
-
-        <!-- 9. Anomaly Detector -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>Credit Card Fraud Detector (Unsupervised)</h3>
-                <span class="badge badge-live">Live Demo</span>
-            </div>
-            <p>
-                Unsupervised anomaly detection on 284K credit card transactions (0.17% fraud).
-                Models train only on normal data and learn to flag deviations. Compares Isolation Forest,
-                Local Outlier Factor, and One-Class SVM — revealing the precision-recall tradeoff
-                in extreme class imbalance.
-            </p>
-            <div class="tags">
-                <span class="tag">scikit-learn</span>
-                <span class="tag">Anomaly Detection</span>
-                <span class="tag">Unsupervised</span>
-                <span class="tag">Imbalanced Data</span>
-            </div>
-            <div class="project-links">
-                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/anomaly-detector" target="_blank">Try it live &rarr;</a>
-                <a href="https://github.com/Eric-Ristol/anomaly-detector" target="_blank">Source code</a>
-            </div>
-        </div>
-
-
-        <!-- 10. CartPole Q-Learning -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>CartPole Q-Learning (Reinforcement Learning)</h3>
-                <span class="badge badge-live">Live Demo</span>
-            </div>
-            <p>
-                A tabular Q-Learning agent that learns to balance a pole on a cart from scratch.
-                Discretises the continuous state space into bins and builds an action-value table
-                over 10,000 episodes of trial and error — going from instant failure (~25 steps)
-                to sustained balancing (150+ steps).
-            </p>
-            <div class="tags">
-                <span class="tag">Gymnasium</span>
-                <span class="tag">Q-Learning</span>
-                <span class="tag">Reinforcement Learning</span>
-                <span class="tag">NumPy</span>
-            </div>
-            <div class="project-links">
-                <a class="live-link" href="https://huggingface.co/spaces/EricRistol/cartpole-qlearning" target="_blank">Try it live &rarr;</a>
-                <a href="https://github.com/Eric-Ristol/cartpole-qlearning" target="_blank">Source code</a>
-            </div>
-        </div>
-
-        <!-- 5. Student Performance -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>Student Performance Predictor</h3>
-                <span class="badge badge-tabular">Tabular ML</span>
-            </div>
-            <p>
-                Predicts a student's final grade from study habits, sleep, attendance, and previous grades.
-                Compares Linear Regression, Ridge, Lasso, Decision Tree, Random Forest, and SVR.
-                Proper train/test split with StandardScaler fitted only on training data.
-            </p>
-            <div class="tags">
-                <span class="tag">scikit-learn</span>
-                <span class="tag">Regression</span>
-                <span class="tag">Feature Scaling</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/Eric-Ristol/grade-predictor" target="_blank">Source code</a>
-            </div>
-        </div>
-
-        <!-- 7. KNN from Scratch -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>KNN Classifier (from scratch)</h3>
-                <span class="badge badge-tabular">From Scratch</span>
-            </div>
-            <p>
-                K-Nearest Neighbours implemented from zero — Euclidean distance, majority voting,
-                no scikit-learn. Classifies tree species from physical measurements. Built to understand
-                the algorithm at the lowest level before using library implementations.
-            </p>
-            <div class="tags">
-                <span class="tag">NumPy</span>
-                <span class="tag">Classification</span>
-                <span class="tag">From Scratch</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/Eric-Ristol/knn-from-scratch" target="_blank">Source code</a>
-            </div>
-        </div>
-
-        <!-- 8. Habit Tracker -->
-        <div class="project-card">
-            <div class="project-top">
-                <h3>Habit Tracker (OOP + Functional Python)</h3>
-                <span class="badge badge-rag">Backend</span>
-            </div>
-            <p>
-                A command-line habit tracker built for a university course on OOP and functional programming.
-                Supports any-frequency habits, streak tracking, struggle detection, and historical completion checks.
-                Persistent SQLite3 storage, modular architecture, and a full pytest suite.
-            </p>
-            <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">OOP</span>
-                <span class="tag">SQLite3</span>
-                <span class="tag">pytest</span>
-                <span class="tag">CLI</span>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/Eric-Ristol/HabitTrackerIU" target="_blank">Source code</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>
-            Built by Eric Ristol &middot;
-            <a href="https://github.com/Eric-Ristol" target="_blank">github.com/Eric-Ristol</a>
-        </p>
-    </div>
+    </footer>
 
 </body>
 </html>
